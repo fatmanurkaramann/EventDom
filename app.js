@@ -5,7 +5,7 @@ const text = document.getElementById("container");
 button.addEventListener("click", onClick);
 selectBox.addEventListener("click", function () {
   text.className = "";
-  if (select.value == "red") {
+  if (select.value == "red") {  
     text.classList.add("redOption"); //setattribute
   } else if (select.value == "blue") {
     text.classList.add("blueOption");
