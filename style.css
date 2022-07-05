@@ -1,0 +1,62 @@
+.redOption {
+  color: red;
+}
+.blueOption {
+  color: blue;
+}
+.purpleOption {
+  color: purple;
+}
+.pinkOption {
+  color: rgb(241, 116, 214);
+}
+.orangeOption {
+  color: orange;
+}
+#container {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+.text {
+  font-size: 30px;
+  font-weight: bold;
+  animation: effect 2s linear infinite;
+  color: transparent;
+}
+@keyframes effect {
+  0% {
+    background: linear-gradient(#93ffd8, #14c38e, #93ffd8);
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(#3ce7d7, #000fff);
+    -webkit-background-clip: text;
+  }
+}
+.inputText {
+  font-size: 20px;
+}
+
+#selectColor {
+  padding: 10px;
+  font-size: 17px;
+}
+#button {
+  transform: translate(-5%, -5%);
+  background-color: #f1f1f1;
+  color: #00ffab;
+  font-size: 16px;
+  padding: 8px 20px;
+  border-color: #caf7e3;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#button:hover {
+  background-color: #00ffab; /* Green */
+  color: white;
+  box-shadow: 0 10px 20px 0 #28df99, 0 15px 50px 0 #f9f9f9;
+}
