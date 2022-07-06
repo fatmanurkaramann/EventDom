@@ -46,11 +46,12 @@
   font-size: 17px;
 }
 #button {
+  margin-top: 10px;
   transform: translate(-5%, -5%);
   background-color: #f1f1f1;
   color: #00ffab;
   font-size: 16px;
-  padding: 8px 20px;
+  padding: 9px 20px;
   border-color: #caf7e3;
   cursor: pointer;
   border-radius: 5px;
@@ -59,4 +60,25 @@
   background-color: #00ffab; /* Green */
   color: white;
   box-shadow: 0 10px 20px 0 #28df99, 0 15px 50px 0 #f9f9f9;
+}
+#resetButton{
+  margin-top: 10px;
+  margin-left: 8px;
+  transform: translate(-5%, -5%);
+  background-color: #f1f1f1;
+  color: #FF1700;
+  font-size: 16px;
+  padding: 9px 20px;
+  border-color: #caf7e3;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#resetButton:hover {
+  background-color: #FF1700; /* Green */
+  color: white;
+  box-shadow: 0 10px 20px 0 #F90716, 0 15px 50px 0 #f9f9f9;
+}
+#form{
+  background-color: #f1f1f1;
+  font-size: 20px;
 }
