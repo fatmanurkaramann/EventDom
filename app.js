@@ -41,19 +41,46 @@ function formSubmit(event) {
   console.log("işlem gerçekleşti");
   const firstName = document.querySelector("#fname");
   const lastName = document.querySelector("#lname");
-  if (firstName.value && lastName.value) {
-    addItem(firstName.value, lastName.value);
+  const age = document.querySelector("#age");
+  if (firstName.value && lastName.value && age.value) {
+    let control = checkStringControl([firstName.value, lastName.value]);
+
+    if (control == false) {
+      alertDom.innerHTML = alert("Harf giriniz");
+      return;
+    }
+    addItem(firstName.value, lastName.value, age.value);
     firstName.value = "";
     lastName.value = "";
+    age.value = "";
   } else {
-    alertDom.innerHTML = alert("Başlık", "Eksik bilgi girdiniz.", "danger");
+    alertDom.innerHTML = alert(" Başlık", "Eksik bilgi girdiniz.", "danger");
   }
 }
+const checkStringControl = (value) => {
+  let flag = true;
+  debugger
+  for (let j = 0; j < value.length; j++) {
+    for (let i = 0; i < value[j].length; i++) {
+      if (
+        !(value[j].charCodeAt(i) >= 65 && value[j].charCodeAt(i) <= 120) &&
+        value[j].charCodeAt(i) != 32 &&
+        value[j].charCodeAt(i) != 0
+      ) {
+        flag = false;
+        break;
+      }
+    }
+  }
+
+  return flag;
+};
+
 const userList = document.querySelector("#userList");
 
-const addItem = (firstName, lastName) => {
+const addItem = (firstName, lastName, age) => {
   let liDOM = document.createElement("li");
-  liDOM.innerHTML = `${firstName} ${lastName}`;
+  liDOM.innerHTML = `${firstName} ${lastName} : ${age}`;
   liDOM.classList.add("list-group-item", "success");
   userList.append(liDOM);
   userList.className = "";

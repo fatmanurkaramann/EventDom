@@ -7,19 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="alert"></div>
+  
+  <div id="alert">
+    
+  </div>
   <div class="container" id="container">
     <div>
+
+
       <p id="text" class="text"></p>
     </div>
     <form action="/action_page.php" class="inputText" id="inputText">
       <label for="fname" id="l1">First name:</label><br />
-      <input type="text" id="fname" name="fname" value="" /><br />
+      <input type="text" id="fname" name="fname"  value="" /><br />
       <label for="lname" id="l2">Last name:</label><br />
-      <input type="text" id="lname" name="lname" value="" id="label2" />
+      <input type="text" id="lname" name="lname"  value="" /><br/>
+      <p id="message"></p>
+      <label for="age" id="l3">Age:</label><br />
+      <input type="number" id="age" name="age" value=""  />
       <div class="btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-hand-thumbs-up"
           viewBox="0 0 16 16">
@@ -28,7 +37,7 @@
         </svg>
         <!-- <input type="number" name="score" id="score"></input> -->
   
-        <button type="submit" id="button"></button>
+        <button type="submit" id="button" ></button>
         <button type="reset" id="resetButton">Reset</button>
   
       </div>
